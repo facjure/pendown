@@ -42,7 +42,9 @@
 
 <p>Zenup allows you to write poetry using an easy-to-read, easy-to-write plain text format, then convert it to a <a href="http://en.wikipedia.org/wiki/HTML5">language</a> understood by modern browsers on desktop, mobile, and web.</p>
 
-<p>Zenup is free software, available under a BSD-style open source license. It comprises of two things: 1) a plain text formatting syntax and 2) a tool written in Javascript-the language of the web, that converts the plain text formatting to HTML5. The goal is that poems should be publishable as-is, as plain text, without looking like it’s been consumed by content management systems. The best way to get a feel for the  formatting syntax is simply to look at a Zenup-formatted poem, below.</p>
+<p>Zenup is free software, available under a BSD-style open source license. It comprises of two things: 1) a plain text formatting syntax and 2) a tool written in Javascript (the language of the web) to convert plain text format to HTML5. The goal is that poems should be publishable as-is, as plain text, without looking like it’s been consumed by content management systems. </p>
+
+<p>The best way to get a feel for the  formatting syntax is simply to look at a Zenup-formatted poem, below.</p>
 
 <pre><code>---
 title: You May Forget
@@ -103,7 +105,9 @@ tags:
 
 <p>Note the "space" after ":" and "-". Note the <code>---</code> before and after the metadata. </p>
 
-<p>Filenames are saved as <code>first-name-last-name-first-six-words-of-title.txt</code> OR <code>first-name-last-name-first-six-words-of-opening-line.txt</code>. An optional <code>.zenup</code> file extension can be used for tools that understands this format.</p>
+<p>Filenames are saved as <code>first-name-last-name-first-six-words-of-title.txt</code> OR <code>first-name-last-name-first-six-words-of-opening-line.txt</code>. </p>
+
+<p>An optional <code>.zenup</code> file extension can be used for tools that understands this format.</p>
 
 <p><strong>FORMATTING</strong></p>
 
@@ -111,7 +115,7 @@ tags:
 <li><code>*italics*</code></li>
 <li><code>**bold**</code></li>
 <li><code>emdash--</code></li>
-</ul><p>** RULES **</p>
+</ul><p><strong>RULES</strong></p>
 
 <ul>
 <li>A poem should have a title. If a title doesn't exist, the first or last line can be used as title.</li>
@@ -120,14 +124,17 @@ tags:
 </ul><h2>
 <a name="editors" class="anchor" href="#editors"><span class="octicon octicon-link"></span></a>EDITORS</h2>
 
-<p>Since the format is plaintext, supported as default by major editors: notepad, textedit, <a href="http://www.iawriter.com/mac/">iAWriter</a>, and MS Word. However, there is one important step: files must be saved in <a href="http://en.wikipedia.org/wiki/UTF-8">UTF-8</a> 'encoding'-- a setting available as options in the 'save as' file-dialog. </p>
+<p>Plaintext format is supported by default in <em>all</em> major editors: notepad, textedit, <a href="http://www.iawriter.com/mac/">iAWriter</a>, MS Word, etc., However, there are two important steps</p>
 
-<p>Saving a file in UTF-8 is a necessary, important step to preserve foreign-language characters, accent quotes, across machines so humands can read.</p>
+<ol>
+<li>Files must be saved with an extension ".txt" or ".zenup"</li>
+<li>Files must be saved in <a href="http://en.wikipedia.org/wiki/UTF-8">UTF-8</a> 'encoding'-- a setting available as options in the 'save as' file-dialog. </li>
+</ol><p>Saving a file in UTF-8 is a necessary, important step to preserve foreign-language characters, accent quotes, across machines so humands can read.</p>
 
 <h2>
 <a name="scripts" class="anchor" href="#scripts"><span class="octicon octicon-link"></span></a>SCRIPTS</h2>
 
-<p>Zenup comes with free tools written in Python and Javascript, to convert poems from Zenup format to HTML5. A sample CSS is also provided for proofing.</p>
+<p>Zenup comes with free tools written in Python and Javascript, to convert poems from Zenup format to HTML5 with CSS3, or a printer-friendly page.</p>
 
 <p>Writing a tool in other languages should be trivial, given that YAML and Plaintext are standard formats.</p>
 
@@ -136,7 +143,7 @@ tags:
 
 <p>This is a working draft.</p>
 
-<p>Currently, Zenup is being used by Poetroid, an open platform to disover poetry together. <strong>35,000 poems</strong> were restored from the public domain using this format.</p>
+<p>Currently, Zenup is being used by <a href="https://github.com/poetroid">Poetroid</a>, an open platform to disover poetry together. <strong>35,000 poems</strong> were restored from the public domain using this format.</p>
 
 <h2>
 <a name="acknowledgements" class="anchor" href="#acknowledgements"><span class="octicon octicon-link"></span></a>ACKNOWLEDGEMENTS</h2>
