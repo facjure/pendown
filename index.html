@@ -1,0 +1,163 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <title>Zenup by poetroid</title>
+
+    <link rel="stylesheet" href="stylesheets/styles.css">
+    <link rel="stylesheet" href="stylesheets/pygment_trac.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <!--[if lt IE 9]>
+    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+  </head>
+  <body>
+    <div class="wrapper">
+      <header>
+        <h1>Zenup</h1>
+        <p>A markup for writing poetry on the browser.</p>
+
+        <p class="view"><a href="https://github.com/poetroid/zenup">View the Project on GitHub <small>poetroid/zenup</small></a></p>
+
+
+        <ul>
+          <li><a href="https://github.com/poetroid/zenup/zipball/master">Download <strong>ZIP File</strong></a></li>
+          <li><a href="https://github.com/poetroid/zenup/tarball/master">Download <strong>TAR Ball</strong></a></li>
+          <li><a href="https://github.com/poetroid/zenup">View On <strong>GitHub</strong></a></li>
+        </ul>
+      </header>
+      <section>
+        <h1>
+<a name="zenup" class="anchor" href="#zenup"><span class="octicon octicon-link"></span></a>Zenup</h1>
+
+<p>A markup for writing poetry on the browser.</p>
+
+<p>Inspired by <a href="http://daringfireball.net/projects/markdown/">Markdown</a> and <a href="http://en.wikipedia.org/wiki/YAML">YAML</a>.</p>
+
+<h2>
+<a name="introduction" class="anchor" href="#introduction"><span class="octicon octicon-link"></span></a>INTRODUCTION</h2>
+
+<p>Thousands of poems in the public domain live buried in libraries, archaic websites, and journals gone out of print. Emerging poets publish poetry online and publishers save them in content management systems, programs that strip poems and lock them in complex software. We don't have an open format to publish poetry on the web.</p>
+
+<p>Zenup allows you to write poetry using an easy-to-read, easy-to-write plain text format, then convert it to a <a href="http://en.wikipedia.org/wiki/HTML5">language</a> understood by modern browsers on desktop, mobile, and web.</p>
+
+<p>Zenup is free software, available under a BSD-style open source license. It comprises of two things: 1) a plain text formatting syntax and 2) a tool written in Javascript-the language of the web, that converts the plain text formatting to HTML5. The goal is that poems should be publishable as-is, as plain text, without looking like it’s been consumed by content management systems. The best way to get a feel for the  formatting syntax is simply to look at a Zenup-formatted poem, below.</p>
+
+<pre><code>---
+title: You May Forget
+author: Sappho
+country: Greece
+year: 600/500 bc
+gender: female
+tags:
+-  time
+-  love
+-  lyric
+-  memory
+---
+You may forget but
+let me tell you
+this: someone in
+some future time
+will think of us.
+
+</code></pre>
+
+<h2>
+<a name="syntax" class="anchor" href="#syntax"><span class="octicon octicon-link"></span></a>SYNTAX</h2>
+
+<p>The syntax is inspired from Markdown and YAML. Unlike Markdown, Zenup preserves whitespace "as-is", a necessity to preserve the poem's visual semantics.</p>
+
+<p>There are two parts to the syntax: poem and metadata.</p>
+
+<p><strong>POEM</strong></p>
+
+<p><a href="http://en.wikipedia.org/wiki/Plain_text">Plain Text</a> is still an excellent format supported by all editors by default.</p>
+
+<pre><code>Every time I say "joy," joyous thing,
+you will know that I am talking about you,
+for you are the joy of all joyous beauty
+and the joy of all joyous and beautiful pleasures,
+</code></pre>
+
+<p><strong>METADATA</strong></p>
+
+<p>YAML, a humanly readable format, supports storing metadata inline.</p>
+
+<p>Metadata will be curated <em>inline</em> for describing the poem,  to inform humans and machines of semantic data for further analysis.</p>
+
+<pre><code>---
+title: You May Forget
+author: Sappho
+country: Greece
+year: 600/500 bc
+gender: female
+tags:
+-  time
+-  love
+-  lyric
+-  memory
+---
+</code></pre>
+
+<p>Note the "space" after ":" and "-". Note the <code>---</code> before and after the metadata. </p>
+
+<p>Filenames are saved as <code>first-name-last-name-first-six-words-of-title.txt</code> OR <code>first-name-last-name-first-six-words-of-opening-line.txt</code>. An optional <code>.zenup</code> file extension can be used for tools that understands this format.</p>
+
+<p><strong>FORMATTING</strong></p>
+
+<ul>
+<li><code>*italics*</code></li>
+<li><code>**bold**</code></li>
+<li><code>emdash--</code></li>
+</ul><p>** RULES **</p>
+
+<ul>
+<li>A poem should have a title. If a title doesn't exist, the first or last line can be used as title.</li>
+<li>A poem should have an author's name (first, last, or both)</li>
+<li>Tags are optional, though a minimum of three tags are recommended.</li>
+</ul><h2>
+<a name="editors" class="anchor" href="#editors"><span class="octicon octicon-link"></span></a>EDITORS</h2>
+
+<p>Since the format is plaintext, supported as default by major editors: notepad, textedit, <a href="http://www.iawriter.com/mac/">iAWriter</a>, and MS Word. However, there is one important step: files must be saved in <a href="http://en.wikipedia.org/wiki/UTF-8">UTF-8</a> 'encoding'-- a setting available as options in the 'save as' file-dialog. </p>
+
+<p>Saving a file in UTF-8 is a necessary, important step to preserve foreign-language characters, accent quotes, across machines so humands can read.</p>
+
+<h2>
+<a name="scripts" class="anchor" href="#scripts"><span class="octicon octicon-link"></span></a>SCRIPTS</h2>
+
+<p>Zenup comes with free tools written in Python and Javascript, to convert poems from Zenup format to HTML5. A sample CSS is also provided for proofing.</p>
+
+<p>Writing a tool in other languages should be trivial, given that YAML and Plaintext are standard formats.</p>
+
+<h2>
+<a name="status" class="anchor" href="#status"><span class="octicon octicon-link"></span></a>STATUS</h2>
+
+<p>This is a working draft.</p>
+
+<p>Currently, Zenup is being used by Poetroid, an open platform to disover poetry together. <strong>35,000 poems</strong> were restored from the public domain using this format.</p>
+
+<h2>
+<a name="acknowledgements" class="anchor" href="#acknowledgements"><span class="octicon octicon-link"></span></a>ACKNOWLEDGEMENTS</h2>
+
+<p>Thank you, <a href="https://twitter.com/AtaMoharreri">Ata Moharreri</a>, for your feedback in moving poetry forward.</p>
+
+<p>Thank you, Sreeharsha Mudivarti, for implementing the early prototypes.</p>
+
+<h2>
+<a name="copyright--license" class="anchor" href="#copyright--license"><span class="octicon octicon-link"></span></a>Copyright &amp; License</h2>
+
+<p>Copyright © 2013, Priyatam Mudivarti.</p>
+
+<p>Zenup is free software, available under a BSD-style open source license. See the License page for more information.</p>
+      </section>
+      <footer>
+        <p>This project is maintained by <a href="https://github.com/poetroid">poetroid</a></p>
+        <p><small>Hosted on GitHub Pages &mdash; Theme by <a href="https://github.com/orderedlist">orderedlist</a></small></p>
+      </footer>
+    </div>
+    <script src="javascripts/scale.fix.js"></script>
+    
+  </body>
+</html>
