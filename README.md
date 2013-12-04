@@ -11,7 +11,9 @@ Thousands of poems in the public domain live buried in libraries, archaic websit
 
 Zenup allows you to write poetry using an easy-to-read, easy-to-write plain text format, then convert it to a [language](http://en.wikipedia.org/wiki/HTML5) understood by modern browsers on desktop, mobile, and web.
 
-Zenup is free software, available under a BSD-style open source license. It comprises of two things: 1) a plain text formatting syntax and 2) a tool written in Javascript-the language of the web, that converts the plain text formatting to HTML5. The goal is that poems should be publishable as-is, as plain text, without looking like it’s been consumed by content management systems. The best way to get a feel for the  formatting syntax is simply to look at a Zenup-formatted poem, below.
+Zenup is free software, available under a BSD-style open source license. It comprises of two things: 1) a plain text formatting syntax and 2) a tool written in Javascript (the language of the web) to convert plain text format to HTML5. The goal is that poems should be publishable as-is, as plain text, without looking like it’s been consumed by content management systems. 
+
+The best way to get a feel for the  formatting syntax is simply to look at a Zenup-formatted poem, below.
 
 
 ```
@@ -75,7 +77,9 @@ tags:
 
 Note the "space" after ":" and "-". Note the `---` before and after the metadata. 
 
-Filenames are saved as `first-name-last-name-first-six-words-of-title.txt` OR `first-name-last-name-first-six-words-of-opening-line.txt`. An optional `.zenup` file extension can be used for tools that understands this format.
+Filenames are saved as `first-name-last-name-first-six-words-of-title.txt` OR `first-name-last-name-first-six-words-of-opening-line.txt`. 
+
+An optional `.zenup` file extension can be used for tools that understands this format.
 
 **FORMATTING**
 
@@ -83,8 +87,7 @@ Filenames are saved as `first-name-last-name-first-six-words-of-title.txt` OR `f
 - `**bold**`
 - `emdash--`
 
-
-** RULES **
+**RULES**
 
 - A poem should have a title. If a title doesn't exist, the first or last line can be used as title.
 - A poem should have an author's name (first, last, or both)
@@ -92,13 +95,16 @@ Filenames are saved as `first-name-last-name-first-six-words-of-title.txt` OR `f
 
 ## EDITORS
 
-Since the format is plaintext, supported as default by major editors: notepad, textedit, [iAWriter](http://www.iawriter.com/mac/), and MS Word. However, there is one important step: files must be saved in [UTF-8](http://en.wikipedia.org/wiki/UTF-8) 'encoding'-- a setting available as options in the 'save as' file-dialog. 
+Plaintext format is supported by default in *all* major editors: notepad, textedit, [iAWriter](http://www.iawriter.com/mac/), MS Word, etc., However, there are two important steps
+
+1. Files must be saved with an extension ".txt" or ".zenup"
+1. Files must be saved in [UTF-8](http://en.wikipedia.org/wiki/UTF-8) 'encoding'-- a setting available as options in the 'save as' file-dialog. 
 
 Saving a file in UTF-8 is a necessary, important step to preserve foreign-language characters, accent quotes, across machines so humands can read.
 
 ## SCRIPTS
 
-Zenup comes with free tools written in Python and Javascript, to convert poems from Zenup format to HTML5. A sample CSS is also provided for proofing.
+Zenup comes with free tools written in Python and Javascript, to convert poems from Zenup format to HTML5 with CSS3, or a printer-friendly page.
 
 Writing a tool in other languages should be trivial, given that YAML and Plaintext are standard formats.
 
@@ -106,7 +112,7 @@ Writing a tool in other languages should be trivial, given that YAML and Plainte
 
 This is a working draft.
 
-Currently, Zenup is being used by Poetroid, an open platform to disover poetry together. **35,000 poems** were restored from the public domain using this format.
+Currently, Zenup is being used by [Poetroid](https://github.com/poetroid), an open platform to disover poetry together. **35,000 poems** were restored from the public domain using this format.
 
 ## ACKNOWLEDGEMENTS
 
