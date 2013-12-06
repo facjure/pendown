@@ -7,11 +7,11 @@ Inspired by [Markdown](http://daringfireball.net/projects/markdown/) and [YAML](
 
 ## INTRODUCTION
 
-Thousands of poems in the public domain live buried in libraries, archaic websites, and journals gone out of print. Emerging poets publish poetry online and publishers save them in content management systems, programs that strip poems and lock them in complex software. We don't have an open format to publish poetry on the web.
+Thousands of public domain poems live buried in libraries, archaic websites, and journals gone out of print. Emerging poets publish poems online and publishers save them in content management systems, programs that strip poems and lock them in complex software. We don't have an open format to publish poetry on the web.
 
-Zenup allows you to write poetry using an easy-to-read, easy-to-write plain text format, then convert it to a [language](http://en.wikipedia.org/wiki/HTML5) understood by modern browsers on desktop, mobile, and web.
+Zenup allows you to write poetry using an easy-to-read, easy-to-write plain text format, and then convert it to a [language](http://en.wikipedia.org/wiki/HTML5) understood by modern browsers on desktop, mobile, and web.
 
-Zenup is free software, available under a BSD-style open source license. It comprises of two things: 1) a plain text formatting syntax and 2) a tool written in Javascript (the language of the web) to convert plain text format to HTML5. The goal is that poems should be publishable as-is, as plain text, without looking like it’s been consumed by content management systems. 
+Zenup is free software, available under a BSD-style open source license. It is made of two things: 1) a plain text formatting syntax and 2) a tool written in Javascript (the language of the web) to convert plain text format to HTML5. The goal is that poems should be publishable as-is, as plain text, without looking like it’s been consumed by content management systems. 
 
 The best way to get a feel for the  formatting syntax is simply to look at a Zenup-formatted poem, below.
 
