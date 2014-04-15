@@ -1,5 +1,5 @@
-Zenup
-=====
+Zendown
+=======
 
 A markup for writing poetry on the browser.
 
@@ -11,9 +11,9 @@ Thousands of poems in the public domain live buried in libraries, archaic websit
 
 We don't have an open format to share poetry on the web.
 
-Zenup allows you to write poetry using an easy-to-read, easy-to-write, plain-text format. You can convert it to a [HTML5](http://en.wikipedia.org/wiki/HTML5) understood by modern browsers on desktop, mobile, and web.
+Zendown allows you to write poetry using an easy-to-read, easy-to-write, plain-text format. You can convert it to a [HTML5](http://en.wikipedia.org/wiki/HTML5) understood by modern browsers on desktop, mobile, and web.
 
-Zenup is free software, available under a BSD-style open source license. It comprises of two things: 1) a plain text formatting syntax and 2) a tool written in Javascript-the language of the web, that converts the plain text formatting to HTML5. The goal is that poems should be publishable and restored as-is, as plain-text, before being consumed by content management systems. The best way to get a feel for the formatting syntax is simply to look at a Zenup-formatted poem, below.
+Zendown is free software, available under a BSD-style open source license. It comprises of two things: 1) a plain text formatting syntax and 2) a tool written in Javascript-the language of the web, that converts the plain text formatting to HTML5. The goal is that poems should be publishable and restored as-is, as plain-text, before being consumed by content management systems. The best way to get a feel for the formatting syntax is simply to look at a Zenup-formatted poem, below.
 
 
 ```
@@ -107,17 +107,17 @@ Saving a file in UTF-8 is a necessary, important step, to preserve foreign-langu
 
 ## SCRIPTS
 
-Zenup comes with free tools written in Javascript and Clojurescript, to convert poems from Zenup format to HTML5. A sample CSS is also provided for proofing. Writing tools in other languages is straight-forward, given that YAML and Plaintext are well-known formats.
+Zendown comes with free tools written in Javascript and Clojurescript, to convert poems from Zendown format to HTML5. A sample CSS is also provided for proofing. Writing tools in other languages is straight-forward, given that YAML and Plaintext are well-known formats.
 
 ## STATUS
 
 This is a working draft.
 
-Currently, Zenup is being used by [Poetroid](https://github.com/poetroid), an open platform to disover poetry together.
+Currently, Zendown is being used by [Poetroid](https://github.com/poetroid), an open platform to disover poetry together.
 
 ## ACKNOWLEDGEMENTS
 
-Thank you, [Ata Moharreri](https://twitter.com/AtaMoharreri), for your feedback in moving poetry forward.
+Thank you, [Ata Moharreri](https://twitter.com/AtaMoharreri), for your feedback.
 
 Thank you, Sreeharsha Mudivarti, for implementing the early prototypes.
 
@@ -125,4 +125,4 @@ Thank you, Sreeharsha Mudivarti, for implementing the early prototypes.
 
 Copyright © 2014, Priyatam Mudivarti.
 
-Zenup is free software, available under a BSD-style open source license. See the License page for more information.
+Zendown is free software, available under a BSD-style open source license. See the License page for more information.
