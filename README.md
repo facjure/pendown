@@ -1,60 +1,25 @@
-Zendown
-=======
+Zenup
+=====
 
-A markup for writing poetry on the browser.
+A markup for writing poems and stories.
 
-Inspired by [Markdown](http://daringfireball.net/projects/markdown/) and [YAML](http://en.wikipedia.org/wiki/YAML).
+Inspired by [Jekyll blogs](http://jekyllrb.com/docs/home/), and composed of [YAML](http://en.wikipedia.org/wiki/YAML), [Markdown](http://daringfireball.net/projects/markdown/), or Plaintext.
 
 ## INTRODUCTION
 
-Thousands of poems in the public domain live buried in libraries, archaic websites, and journals gone out of print. Emerging poets publish poetry online or print magazines where publishers save them in content management systems, programs that strip and lock poems in complex software.
+Thousands of poems and stories in the public domain live buried in libraries, archaic websites, and journals gone out of print. Emerging poets and writers publish their literature online where magazines save them in content management systems, programs that strip and lock literature in complex software.
 
-We don't have an open format to share poetry on the web.
+We don't have an open format to share literature on the web.
 
-Zendown allows you to write poetry using an easy-to-read, easy-to-write, plain-text format. You can convert it to a [HTML5](http://en.wikipedia.org/wiki/HTML5) understood by modern browsers on desktop, mobile, and web.
+Zenup allows you to write poems and stories using an easy-to-read, easy-to-write, plain-text or markdown format, interchangeably. Scripts can then convert them to a [HTML5](http://en.wikipedia.org/wiki/HTML5) understood by modern browsers on desktop, mobile, and web. The goal is that poems and stories should be publishable and restored as-is, as plain-text, before being consumed by content management systems. 
 
-Zendown is free software, available under a BSD-style open source license. It comprises of two things: 1) a plain text formatting syntax and 2) a tool written in Javascript-the language of the web, that converts the plain text formatting to HTML5. The goal is that poems should be publishable and restored as-is, as plain-text, before being consumed by content management systems. The best way to get a feel for the formatting syntax is simply to look at a Zenup-formatted poem, below.
-
-
-```
----
-title: You May Forget
-author: Sappho
-country: Greece
-year: 600/500 bc
-gender: female
-tags:
--  time
--  love
--  lyric
--  memory
----
-You may forget but
-let me tell you
-this: someone in
-some future time
-will think of us.
-
-```
+Zenup is free software, available under a BSD-style open source license. 
 
 ## SYNTAX
 
-The syntax is inspired from Markdown and YAML. Unlike Markdown, Zenup preserves whitespace "as-is", a necessity to preserve the poem's visual semantics.
+The syntax is a combination of  YAML metadata and Content. 
 
-There are two parts to the syntax: poem and metadata.
-
-**POEM**
-
-[Plain Text](http://en.wikipedia.org/wiki/Plain_text) is still an excellent format supported by default in all editors.
-
-```
-Every time I say "joy," joyous thing,
-you will know that I am talking about you,
-for you are the joy of all joyous beauty
-and the joy of all joyous and beautiful pleasures,
-```
-
-**METADATA**
+### METADATA
 
 YAML, a humanly readable format, supports storing metadata.
 
@@ -77,24 +42,80 @@ tags:
 
 Note the "space" after ":" and "-", `---` before and after the metadata.
 
-Filenames are saved as:
+### CONTENT
+
+**Plaintext**
+
+[Plain Text](http://en.wikipedia.org/wiki/Plain_text) is still an excellent format supported by default in all editors. Many times poems require whitespace to be preserved "as-is"—a necessity to illustrate a poem's visual semantics and line endings.
+
+By default all Zenup content is plain-text.
+
+
+```
+---
+title: You May Forget
+author: Sappho
+country: Greece
+year: 600/500 bc
+gender: female
+tags:
+	-  time
+	-  love
+	-  lyric
+	-  memory
+---
+You may forget but
+let me tell you
+this: someone in
+some future time
+will think of us.
+```
+
+Optionally, custom content types can be represented by specifying, `content_type` metadata.
+
+```
+---
+content_type: markdown
+title: The Idiots
+author: Joseph Conrad
+country: USA
+year: 1896
+publisher: The Savoy magazine
+collection: Tales of Unrest
+gender: male
+tags:
+	-  justice
+	-  family
+	-  suicide
+	-  race
+---
+
+We were driving along the road from Treguier to Kervanda. We passed at a smart trot between the hedges topping an earth wall on each side of the road; then at the foot of the steep ascent before Ploumar the horse dropped into a walk, and the driver jumped down heavily from the box. He flicked his whip and climbed the incline, stepping clumsily uphill by the side of the carriage, one hand on the footboard, his eyes on the ground. After a while he lifted his head, pointed up the road with the end of the whip, and said—"The idiot!""
+
+…
+
+```
+
+While support for other plain-text formats like [asciidoc](http://www.methods.co.nz/asciidoc/) or [docbook](http://www.docbook.org) is possible, Zenup aims to keep things simple.  For document conversions, check out [Pandoc](http://johnmacfarlane.net/pandoc/)—an excellent opensource library.
+
+## RULES
+
+For poems, filenames are saved as:
 
 `first-name-last-name-first-six-words-of-title.txt` OR
 `first-name-last-name-first-six-words-of-opening-line.txt`.
 
+For stories, filenames are saved as:
+
+`first-name-last-name-first-six-words-of-title.txt` 
+
 Saving the file as .txt allows maximum compatibility across all editors.
 
-**FORMATTING**
+Mandatory metadata include:
+- title. If a title doesn't exist, the first or last line can be used as title.
+- author's name (first, last, or both)
 
-- `*italics*`
-- `**bold**`
-- `emdash--`
-
-**RULES**
-
-- A poem should have a title. If a title doesn't exist, the first or last line can be used as title.
-- A poem should have an author's name (first, last, or both)
-- Tags are optional, though a minimum of three tags are recommended.
+Thought tags are optional, a minimum of three tags are recommended.
 
 ## EDITORS
 
@@ -107,22 +128,23 @@ Saving a file in UTF-8 is a necessary, important step, to preserve foreign-langu
 
 ## SCRIPTS
 
-Zendown comes with free tools written in Javascript and Clojurescript, to convert poems from Zendown format to HTML5. A sample CSS is also provided for proofing. Writing tools in other languages is straight-forward, given that YAML and Plaintext are well-known formats.
+A default converter in Javascript will be provided.
+
+Converting Zenup to HTML5 is trivial, given that YAML, Plaintext, and Markdown are currently backed by robust open libraries.
 
 ## STATUS
 
 This is a working draft.
 
-Currently, Zendown is being used by [Poetroid](https://github.com/poetroid), an open platform to disover poetry together.
+Currently, Zenup is being used by [Facjure](https://github.com/facjure/public-domain-poetry), to restore thousands of poems and stories.
 
-## ACKNOWLEDGEMENTS
+## CREDITS
 
-Thank you, [Ata Moharreri](https://twitter.com/AtaMoharreri), for your feedback.
-
-Thank you, Sreeharsha Mudivarti, for implementing the early prototypes.
+- [Ata Moharreri](https://twitter.com/AtaMoharreri), for your initial feedback
+- [Sreeharsha Mudivarti](http://lexical.foobar.systems), for supporting early prototypes
 
 ## Copyright & License
 
 Copyright © 2014, Priyatam Mudivarti.
 
-Zendown is free software, available under a BSD-style open source license. See the License page for more information.
+Zenup is free software, available under a BSD-style open source license. See the License page for more information.
