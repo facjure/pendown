@@ -1,0 +1,18 @@
+---
+title: You May Forget
+author: Sappho
+country: Greece
+year: 600/500 bc
+gender: female
+tags:
+-  time
+-  love
+-  lyric
+-  memory
+---
+
+You may forget but
+let me tell you
+this: someone in
+some future time
+will think of us.
