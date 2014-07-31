@@ -1,6 +1,6 @@
-# Zenup Spec
+# Zendown Spec
 
-Zenup's  syntax is a combination of  YAML metadata and Content.
+Zendown's  syntax is a combination of  YAML metadata and Content.
 
 ## METADATA
 
@@ -27,9 +27,9 @@ Note the "space" after ":" and "-", `---` before and after the metadata.
 
 **Plaintext**
 
-By default all Zenup content is [Plain Text](http://en.wikipedia.org/wiki/Plain_text), still an excellent format supported by default in all editors. 
+By default all Zenup content is [Plain Text](http://en.wikipedia.org/wiki/Plain_text), still an excellent format supported by default in all editors.
 
-Many times poems require whitespace to be preserved "as-is"—a necessity to illustrate a poem's visual semantics and line endings. 
+Many times poems require whitespace to be preserved "as-is"—a necessity to illustrate a poem's visual semantics and line endings.
 
 ```
 ---
@@ -83,11 +83,13 @@ Coming soon.
 
 ## Other formats
 
-While support for other plain-text formats like [asciidoc](http://www.methods.co.nz/asciidoc/) or [docbook](http://www.docbook.org) is possible, Zenup aims to keep things simple. 
+While support for other plain-text formats like [asciidoc](http://www.methods.co.nz/asciidoc/) or [docbook](http://www.docbook.org) is possible, Zenup aims to keep things simple.
 
 For document conversions from popular formats, check out [Pandoc](http://johnmacfarlane.net/pandoc/)—an excellent opensource library.
 
 ## RULES
+
+Files must be saved as ".zen" or ".txt".
 
 For poems, filenames are saved as:
 

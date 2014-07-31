@@ -1,5 +1,5 @@
-Zenup
-=====
+Zendown
+=======
 
 A markup for writing poems and stories.
 
@@ -7,19 +7,17 @@ Inspired by [Jekyll blogs](http://jekyllrb.com/docs/home/), and composed of [YAM
 
 ## Introduction
 
-Thousands of poems and stories in the public domain live buried in libraries, archaic websites, and journals gone out of print. Emerging writers publish their literature online where magazines save them in content management systems, programs that strip and lock literature in complex, proprietary software.
+Thousands of poems and stories in the public domain live buried in libraries, archaic websites, and journals gone out of print. Emerging writers publish their literature online where magazines save them in content management systems, programs that strip and lock literature in complex, proprietary software. We don't have an open format to share literature on the web.
 
-We don't have an open format to share literature on the web.
+Zendown allows you to write poems and stories using an easy-to-read, easy-to-write, plain-text or markdown format, interchangeably. Scripts can convert them to a [HTML5](http://en.wikipedia.org/wiki/HTML5) understood by modern browsers on desktop, mobile, and web. The goal is that poems and stories should be publishable and restored as-is, as plain-text, before being consumed by content management systems.
 
-Zenup allows you to write poems and stories using an easy-to-read, easy-to-write, plain-text or markdown format, interchangeably. Scripts can convert them to a [HTML5](http://en.wikipedia.org/wiki/HTML5) understood by modern browsers on desktop, mobile, and web. The goal is that poems and stories should be publishable and restored as-is, as plain-text, before being consumed by content management systems.
-
-Zenup is free software, available under a BSD-style open source license.
+Zendown is free software, available under a BSD-style open source license.
 
 ## SPEC
 
 See [SPEC.md](/SPEC.md) for more details.
 
-## Editor Support
+## Editors
 
 Markdown content can be opened in any Markdown-supported Editor.
 
@@ -32,20 +30,20 @@ Saving a file in UTF-8 is a necessary, important step, to preserve foreign-langu
 
 ## Scripts
 
-Scripts are available under `/scripts`. 
+Scripts are available under `/scripts`.
 
-A default script is written in Clojure. Scripts in Python and Javascript will be implemented soon. Writing scripts in other languagse is trivial, given that YAML and Markdown are widely used and are backed by open parsers, in a language of your choice.
+A default script is written in Clojure. Scripts in Python and Javascript will be implemented soon. Writing scripts in other languagse is trivial, given that YAML and Markdown are widely used and backed by robust parsers, in a language of your choice.
 
 ## Status
 
 This is a working draft.
 
-Currently, Zenup is being used by [Facjure](https://github.com/facjure/public-domain-poetry), to restore thousands of poems and stories.
+Currently, Zendown is being used by [Facjure](https://github.com/facjure/public-domain-poetry), to restore thousands of poems and stories.
 
-## Credits
+## Acknowledgements
 
-- [Ata Moharreri](https://twitter.com/AtaMoharreri), for curating 1600 poems during our initial adoption
-- [Sreeharsha Mudivarti](http://lexical.foobar.systems), for research and early prototyping
+- [Ata Moharreri](https://twitter.com/AtaMoharreri), for curating 1600 poems in [Zendown]()
+- [Sreeharsha Mudivarti](http://lexical.foobar.systems), for research
 
 ## Copyright & License
 
