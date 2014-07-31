@@ -1,4 +1,4 @@
-(ns zenup.core
+(ns zendown.core
   (:refer-clojure :exclude [name parents])
   (:import (java.io File))
   (:require [environ.core :refer [env]]
@@ -38,7 +38,7 @@
              :else title)]
     (sanitize (str author "-" uri))))
 
-(defn read-zenup
+(defn read
   "Process a zenup poem into clj ds: map of metadata :content :tags.
    io-type can be :resource :url :file."
   [io-type file]
@@ -53,4 +53,4 @@
 
 ;; Standalone app, pass filename as args
 (defn -main [& args]
-  (read-zenup :file (second args)))
+  (read :file (second args)))

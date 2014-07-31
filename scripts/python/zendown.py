@@ -3,7 +3,7 @@
     Script to convert poems & stories written in Zenup to HTML
 
     usage:
-        zenup.py <folder-to-zenup-files>
+        zendown.py <folder-to-zenup-files>
 
     copyright:
         (c) 2014 by Priyatam Mudivarti
@@ -18,18 +18,18 @@ import markdown as md
 import argparse
 
 
-def load(path):
+def load(dir_loc):
     """Create a dictionary for retrieving content's raw body, metadata"""
     data = []
-    for fname in os.listdir(path):
+    for fname in os.listdir(dir_loc):
         if fname.endswith('.md') or fname.endswith('.txt'):
             try:
-                meta, raw = read_contents(path, fname)
+                meta, raw = read_contents(dir_loc, fname)
                 content = {
                     "name": meta.get("_type", "contents") + "/" + fname,
                     "original": raw,
                     "html": md.markdown(post['body']),
-                    "modified_date": format_date(path + os.sep + fname)
+                    "modified_date": format_date(dir_loc + os.sep + fname)
                 }
                 content.update(meta)
                 data.append(content)

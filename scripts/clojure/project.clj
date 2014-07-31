@@ -1,7 +1,7 @@
-(defproject zenup "0.2.0"
-  :description "A parser for Zenup, a markup format for poems and stories."
+(defproject zendown "0.2.1"
+  :description "A parser for Zendown, a markup for poems and stories."
   :min-lein-version "2.0.0"
-  :url "https://github.com/facjure/zenup"
+  :url "https://github.com/priyatam/zendown"
   :warn-on-reflection false
   :license {:name "Eclipse Public License"
             :url "http://www.eclipse.org/legal/epl-v10.html"}
@@ -10,6 +10,6 @@
                  [clj-yaml "0.4.0"]
                  [markdown-clj "0.9.47"]]
   :plugins [[lein-environ "0.5.0"]]
-  :uberjar-name "zenup.jar"
-  :main zenup.core
+  :uberjar-name "zendown.jar"
+  :main zendown.core
   :profiles {:uberjar {:aot :all}})
