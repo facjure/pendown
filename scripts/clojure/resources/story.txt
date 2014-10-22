@@ -3,7 +3,7 @@ content_type: markdown
 author: Ernest Hemingway
 gender: male
 title: The old man and the bridge
-year: 8 April 2012
+year: 8 April 1935
 country: America
 tags:
  -  short-story
