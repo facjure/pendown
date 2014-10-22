@@ -1,4 +1,4 @@
-(defproject zendown "0.3.0"
+(defproject facjure/zendown "0.3.0"
   :description "Parser for Zendown, a markup for poems and stories."
   :min-lein-version "2.0.0"
   :url "https://github.com/priyatam/zendown"
