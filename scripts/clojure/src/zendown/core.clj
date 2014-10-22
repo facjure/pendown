@@ -1,10 +1,10 @@
 (ns zendown.core
   (:refer-clojure :exclude [name parents])
   (:import (java.io File))
-  (:require [environ.core :refer [env]]
-            [clojure.pprint :as pp]
+  (:require [clojure.pprint :as pp]
             [clojure.string :as str]
             [clojure.java.io :as io]
+            [clojure.tools.cli :refer [parse-opts]]
             [clj-yaml.core :as yaml]
             [markdown.core :as md])
   (:gen-class))
@@ -38,8 +38,8 @@
              :else title)]
     (sanitize (str author "-" uri))))
 
-(defn read
-  "Process a zenup poem into clj ds: map of metadata :content :tags.
+(defn readany
+  "Process a zendown poem into clj ds: map of metadata :content :tags.
    io-type can be :resource :url :file."
   [io-type file]
   (let [poem (fetch io-type file)
@@ -52,5 +52,21 @@
 
 
 ;; Standalone app, pass filename as args
+
+(defn exit [status msg]
+  (println msg)
+  (System/exit status))
+
 (defn -main [& args]
-  (read :file (second args)))
+  (let [usage "Usage: zendown -f filename"
+        cli-opts [["-f" "--file pathToFile" "full path to gile"
+                   :parse-fn #(read :file %)]
+                  ["-h" "--help"]]
+        {:keys [options arguments errors summary]} (parse-opts args cli-opts)]
+    (cond
+     (:help options) (exit 0 usage)
+     (not= (count arguments) 1) (exit 1 usage)
+     errors (exit 1 usage))
+    (case (first arguments)
+      "file" (read :file options)
+      (exit 1 usage))))

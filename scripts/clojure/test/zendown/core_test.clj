@@ -17,26 +17,26 @@
   (is (contains? content :content)))
 
 (deftest test-content
-  (testing "read plaintext"
-    (let [content (zen/read :str "---
+  (testing "readany plaintext"
+    (let [content (zen/readany :str "---
                                title: You May Forget
                                author: Sappho
                                ---
                                A nice poem ")]
       (check-poem content))
-    (let [content (zen/read :resource "poem.txt")]
+    (let [content (zen/readany :resource "poem.txt")]
       (check-poem content))
-    (let [content (zen/read :url "https://s3.amazonaws.com/poetroid-public-domain/Sappho-You-May-Forget.txt")]
+    (let [content (zen/readany :url "https://s3.amazonaws.com/poetroid-public-domain/Sappho-You-May-Forget.txt")]
       (check-poem content))
-    (let [content (zen/read :file "resources/poem.txt")]
+    (let [content (zen/readany :file "resources/poem.txt")]
       (check-poem content)))
   (testing "generate-uri"
-    (let [uri (zen/generate-uri (zen/read :resource "poem.txt"))]
+    (let [uri (zen/generate-uri (zen/readany :resource "poem.txt"))]
       (is (= uri "sappho-you-may-forget"))))
-  (testing "read markdown"
-    (let [content (zen/read :resource "story.txt")]
+  (testing "readany markdown"
+    (let [content (zen/readany :resource "story.txt")]
       (check-story content))))
 
 ;; REPL
 
-;(zen/read :resource "poem.txt")
+;(zen/readany :resource "poem.txt")
