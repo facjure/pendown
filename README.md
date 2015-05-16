@@ -30,9 +30,9 @@ Saving a file in UTF-8 is a necessary, important step, to preserve foreign-langu
 
 ## Scripts
 
-Scripts are available under `/scripts`.
+Clojure & Python scripts are available under `/scripts`.
 
-A default script is written in Clojure. Scripts in Python and Javascript will be implemented soon. Writing scripts in other languagse is trivial, given that YAML and Markdown are widely used and backed by robust parsers, in a language of your choice.
+Writing scripts in other languagse is trivial, given that YAML and Markdown are widely used and backed by robust parsers, in a language of your choice.
 
 ## Status
 
