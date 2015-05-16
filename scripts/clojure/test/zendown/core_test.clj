@@ -39,4 +39,4 @@
 
 ;; REPL
 
-;(zen/readany :resource "poem.txt")
+(zen/readany :resource "poem.txt")
