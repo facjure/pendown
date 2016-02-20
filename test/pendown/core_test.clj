@@ -1,10 +1,10 @@
-(ns zendown.core-test
+(ns pendown.core-test
   (:import (java.io File))
   (:require [clojure.test :refer :all]
             [clojure.java.io :as io]
             [clojure.string :as str]
             [clojure.edn :as edn]
-            [zendown.core :as zen]))
+            [pendown.core :as zen]))
 
 (defn check-poem [content]
   (is (= "Sappho" (:author content)))
@@ -39,4 +39,5 @@
 
 ;; REPL
 
-(zen/readany :resource "poem.txt")
+(comment
+  (zen/readany :resource "poem.txt"))
